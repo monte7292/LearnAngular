@@ -31,10 +31,10 @@ console.log('Duration:' + duration);
 console.log('Author:' + author);
 
 //Si no hay un tercer personaje saldra not found
-const [p1, p2, trunks = 'Not found']: string[] = ['Goku', 'Vegeta'];
+//const [p1, p2, trunks = 'Not found']: string[] = ['Goku', 'Vegeta'];
 
 //Hacemos el console.log para ver el resultado
-console.log('Personaje 3:' + trunks);
+//console.log('Personaje 3:' + trunks);
 
 
 
