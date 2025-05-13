@@ -1,5 +1,5 @@
 // Definimos una interfaz Product que describe la estructura de un producto
-interface Product {
+export interface Product {
     description: string;  // Descripción del producto
     price: number;       // Precio del producto
 }
@@ -22,7 +22,7 @@ interface TaxCalculationOptions {
 }
 
 
-function taxCalculator( options: TaxCalculationOptions ): [number, number] {
+export function taxCalculator( options: TaxCalculationOptions ): [number, number] {
     // Desestructuramos el objeto options para obtener tax y products directamente
     const { tax, products } = options;
 
