@@ -13,16 +13,6 @@ import { Component, signal } from '@angular/core';
       font-weight: bold;
       color: blue;
     }
-
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      align-items: center;
-
-    }
   `,
 })
 

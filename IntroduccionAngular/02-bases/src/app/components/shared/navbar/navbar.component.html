@@ -1,0 +1,31 @@
+<style>
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #212121;
+    color: white;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+
+  nav a.active {
+    font-weight: bold;
+    color: blue;
+  }
+
+</style>
+
+<nav>
+  <!-- El routerLinkActiveOptions es para que no pille el / de cualquier lado estilo  -->
+  <!-- Que si es / y estás en /hero tambien el hero se pone en azul así que eso lo que hace -->
+  <!-- es basicamente que tiene que ser si o si igual que l routerLink -->
+  <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contador</a>
+  <a [routerLink]="['/hero']" routerLinkActive="active">Hero</a>
+  <a [routerLink]="['/dragonball']" routerLinkActive="active">DragonBall</a>
+  <!-- OTROS -->
+
+</nav>
