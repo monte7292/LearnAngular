@@ -2,57 +2,15 @@
 <hr>
 
 <section class="row">
-
   <div class="col-12 col-sm-6">
-    <!--- <input> : Este es un elemento de entrada HTML básico.
-- type="text" : Especifica que es un campo de texto donde el usuario puede escribir.
-- class="form-control" : Esta es una clase de Bootstrap que da estilo al input, haciéndolo más atractivo y responsive.
-- placeholder="Nombre" : Muestra el texto "Nombre" como indicador cuando el campo está vacío.
-
-- [value]="name()" :
-- Los corchetes [] indican un binding de propiedad en Angular
-- name() es una señal (signal) de Angular que obtiene el valor actual
-- El valor del input se sincronizará con lo que devuelva name()
-
-- (change)="name.set( txtName.value )" :
-- Los paréntesis () indican un binding de evento en Angular
-- Se ejecuta cuando el valor del input cambia
-- name.set() es un método para actualizar el valor de la señal
-- txtName.value obtiene el valor actual del input
-
-- #txtName :
-- Es una variable de referencia de plantilla en Angular
-- Permite acceder al elemento DOM directamente en la plantilla
-- Se usa para obtener el valor del input en el evento change-->
-    <h3>Agregar: {{ name() }}</h3>
-    <input
-    type="text"
-    class="form-control"
-    placeholder="Nombre"
-    [value]="name()"
-    (change)="name.set( txtName.value )"
-    (input)="name.set( txtName.value )"
-    #txtName
-    />
-
-
-    <h3>Power: {{ power() }}</h3>
-    <input
-    type="number"
-    class="form-control mt-2"
-    placeholder="Poder"
-    [value]="power()"
-    (input)="power.set( +txtPower.value )"
-    #txtPower
-    />
-
-
-    <button (click)="addCharacter()" class="mt-2 btn btn-primary">Agregar</button>
+    <dragonball-character-add (newCharacter)="dragonballService.addCharacter($event)"/>
   </div>
 
   <div class="col-12 col-sm-6">
     <!-- Esto lo que hace es importar el componente de character -->
-    <dragonball-character-list [characters]="characters()"/>
+    <dragonball-character-list
+    listName="Listado de personajes"
+    [characters]="dragonballService.characters()"
+    />
   </div>
-
 </section>

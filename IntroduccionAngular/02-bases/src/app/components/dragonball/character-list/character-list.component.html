@@ -1,4 +1,4 @@
-<h3>Listado</h3>
+<h3>{{ listName() }}</h3>
     <ul>
       <!-- Dentro de este scope podemos usar el character del Interface -->
       @for (character of characters(); track character.id; let idx = $index;) {
