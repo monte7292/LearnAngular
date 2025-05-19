@@ -1,0 +1,21 @@
+<h3>Listado</h3>
+    <ul>
+      <!-- Dentro de este scope podemos usar el character del Interface -->
+      @for (character of characters(); track character.id; let idx = $index;) {
+        @if(character.power > 500) {
+          <li>
+            <span>{{ idx + 1}} - {{ character.name }}</span>
+            <!-- Aquí indicaremos que cuando el poder sea mayor que 9000 ponemos el poder en rojo -->
+            <strong
+            [class.text-danger]="character.power > 9000"
+            [class.text-info]="character.power < 9000"
+            >
+            ({{ character.power }})
+            </strong>
+          </li>
+        } @else {
+          <li>Aquí no vale la pena ver nada</li>
+        }
+
+      }
+    </ul>
